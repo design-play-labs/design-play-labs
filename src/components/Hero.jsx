@@ -36,7 +36,7 @@ export default function Hero() {
       <div className="absolute bottom-6 right-6 w-12 h-12 border-b border-r border-lab-fog" />
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full pt-40 pb-20 lg:pt-48 lg:pb-28">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 w-full pt-24 sm:pt-32 lg:pt-48 pb-20 lg:pb-28">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Text Column — takes 8 of 12 cols on desktop */}
           <div className="lg:col-span-8 min-w-0 lg:pt-4">

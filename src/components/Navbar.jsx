@@ -34,7 +34,7 @@ export default function Navbar() {
           <img
             src="/images/Design_Play_Labs_logo_transparent.png"
             alt="Design Play Labs"
-            className="h-28 sm:h-36 lg:h-32 w-auto"
+            className="h-14 sm:h-20 md:h-28 lg:h-32 w-auto"
           />
         </a>
 
@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-2"
+          className="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5"
           aria-label="Toggle menu"
         >
           <motion.span
@@ -95,7 +95,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="font-heading text-xl font-bold uppercase tracking-wide text-lab-graphite hover:text-lab-ink"
+                  className="font-heading text-lg font-bold uppercase tracking-wide text-lab-graphite hover:text-lab-ink"
                 >
                   {link.label}
                 </a>
