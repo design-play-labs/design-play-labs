@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  /* === LAB PALETTE === */
+  --color-lab-white: #FAFBFC;
+  --color-lab-bone: #F2F0ED;
+  --color-lab-fog: #E8E6E1;
+  --color-lab-steel: #B8B5AE;
+  --color-lab-graphite: #4A4843;
+  --color-lab-ink: #1A1917;
+
+  /* accent green — unified across all greens */
+  --color-accent: #00C853;
+  --color-accent-dim: #00A344;
+  --color-accent-glow: #B9F6CA;
+
+  /* warning / experiment-gone-wrong red */
+  --color-danger: #FF1744;
+  --color-danger-dim: #D50000;
+
+  /* Subject 42 specific */
+  --color-s42-purple: #7C4DFF;
+  --color-s42-purple-dim: #6200EA;
+  --color-s42-amber: #FFD740;
+
+  /* fonts */
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Instrument Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* custom easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* === BASE RESETS === */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-lab-white);
+  color: var(--color-lab-ink);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--color-accent-glow);
+  color: var(--color-lab-ink);
+}
+
+/* === CUSTOM UTILITIES === */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Lab grid background pattern */
+.lab-grid {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Specimen label styling */
+.specimen-label {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-lab-graphite);
+  border: 1px solid var(--color-lab-fog);
+  padding: 0.4rem 0.85rem;
+  display: inline-block;
+}
+
+/* Divider line with lab feel */
+.lab-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-lab-fog), transparent);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-lab-bone);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-lab-steel);
+  border-radius: 3px;
+}
