@@ -54,7 +54,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading font-extrabold text-5xl sm:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] tracking-tight mt-6 mb-8"
+              className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] tracking-tight mt-6 mb-8"
             >
               OBSESSIVELY
               <br />
@@ -75,7 +75,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="text-lab-graphite text-xl sm:text-2xl leading-relaxed max-w-lg mb-10"
+              className="text-lab-graphite text-lg sm:text-xl leading-relaxed max-w-lg mb-10"
             >
               We're an indie board/card game studio that treats fun like the serious
               science it obviously is. Something extraordinary is brewing.

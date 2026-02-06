@@ -33,7 +33,7 @@ export default function About() {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[0.95] tracking-tight mt-6 mb-8"
+            className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-6xl leading-[0.95] tracking-tight mt-6 mb-8"
           >
             PRECISION
             <br />
@@ -46,7 +46,7 @@ export default function About() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lab-graphite text-xl sm:text-2xl leading-relaxed"
+            className="text-lab-graphite text-lg sm:text-xl leading-relaxed"
           >
             At Design Play Labs, we treat fun as a serious science. Our mission?
             Distilling complex mechanics into elegant, accessible gameplay. From gorgeous
@@ -121,7 +121,7 @@ export default function About() {
               <div className="grid grid-cols-3 gap-4">
                 {stats.map((stat, i) => (
                   <div key={i} className="text-center">
-                    <div className="font-heading font-extrabold text-2xl lg:text-3xl text-lab-ink">
+                    <div className="font-heading font-extrabold text-xl lg:text-3xl text-lab-ink">
                       {stat.value}
                     </div>
                     <div className="font-mono text-sm font-medium text-lab-graphite tracking-wide mt-1 leading-tight">

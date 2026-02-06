@@ -85,7 +85,7 @@ export default function Subject42() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 lg:mb-24"
         >
-          <h2 className="font-heading font-extrabold text-6xl sm:text-7xl lg:text-[8rem] leading-[0.85] tracking-tighter text-white">
+          <h2 className="font-heading font-extrabold text-4xl sm:text-6xl lg:text-[8rem] leading-[0.85] tracking-tighter text-white">
             SUBJECT
             <br />
             <span className="relative">
@@ -159,11 +159,11 @@ export default function Subject42() {
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5"
           >
-            <p className="text-white/80 text-xl sm:text-2xl leading-relaxed mb-6">
+            <p className="text-white/80 text-lg sm:text-xl leading-relaxed mb-6">
               A card game system of chaos and questionable decision-making. Fun for
               hardcore gamers. Fun for your friend who "doesn't really play games."
             </p>
-            <p className="text-white/80 text-xl sm:text-2xl leading-relaxed mb-8">
+            <p className="text-white/80 text-lg sm:text-xl leading-relaxed mb-8">
               Fun for even Tina, if you can believe it — and Tina doesn't like anything.
             </p>
 
@@ -172,7 +172,7 @@ export default function Subject42() {
               <span className="font-mono text-sm font-medium text-s42-amber tracking-[0.2em] uppercase block">
                 Release Date
               </span>
-              <span className="font-heading font-extrabold text-3xl text-white mt-1 block">
+              <span className="font-heading font-extrabold text-2xl sm:text-3xl text-white mt-1 block">
                 FALL 2026
               </span>
               <span className="font-mono text-sm font-medium text-white/40 tracking-wider mt-1 block">
