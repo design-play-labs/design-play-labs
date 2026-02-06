@@ -34,7 +34,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading font-extrabold text-3xl sm:text-4xl leading-[0.95] tracking-tight mt-6 mb-6"
+              className="font-heading font-extrabold text-2xl sm:text-4xl leading-[0.95] tracking-tight mt-6 mb-6"
             >
               INITIATE
               <br />

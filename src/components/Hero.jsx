@@ -54,7 +54,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] tracking-tight mt-6 mb-8"
+              className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[0.95] tracking-tight mt-6 mb-8"
             >
               OBSESSIVELY
               <br />
