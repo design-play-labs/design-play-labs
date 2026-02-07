@@ -71,11 +71,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <span className="font-mono text-sm text-white/25 tracking-wide">
-            &copy; 2026 DESIGN PLAY LABS. ALL RIGHTS RESERVED. ALL MEEPLES ACCOUNTED FOR.
+        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+          <span className="font-mono text-xs sm:text-sm text-white/25 tracking-wide">
+            &copy; 2026 DESIGN PLAY LABS. ALL RIGHTS RESERVED.
           </span>
-          <span className="font-mono text-sm text-white/15 tracking-wider">
+          <span className="font-mono text-xs sm:text-sm text-white/15 tracking-wider hidden sm:block">
             BUILT WITH OBSESSIVE ATTENTION TO DETAIL
           </span>
         </div>

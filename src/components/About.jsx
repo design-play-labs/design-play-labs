@@ -118,10 +118,10 @@ export default function About() {
               <span className="font-mono text-sm font-medium text-lab-steel tracking-[0.12em] uppercase block mb-5">
                 Lab Metrics — Current Quarter
               </span>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 xs:grid-cols-3 sm:grid-cols-3 gap-4">
                 {stats.map((stat, i) => (
                   <div key={i} className="text-center">
-                    <div className="font-heading font-extrabold text-xl lg:text-3xl text-lab-ink">
+                    <div className="font-heading font-extrabold text-2xl sm:text-xl lg:text-3xl text-lab-ink">
                       {stat.value}
                     </div>
                     <div className="font-mono text-sm font-medium text-lab-graphite tracking-wide mt-1 leading-tight">

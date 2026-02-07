@@ -85,7 +85,7 @@ export default function Subject42() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 lg:mb-24"
         >
-          <h2 className="font-heading font-extrabold text-3xl sm:text-6xl lg:text-[8rem] leading-[0.85] tracking-tighter text-white">
+          <h2 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] leading-[0.85] tracking-tighter text-white">
             SUBJECT
             <br />
             <span className="relative">
@@ -117,7 +117,7 @@ export default function Subject42() {
               <img
                 src={IMG_HERO}
                 alt="Scientists in lab coats observe colorful meeples and game components racing through a particle accelerator tube with streaks of neon light"
-                className="w-full aspect-[21/9] object-cover group-hover:scale-[1.01] transition-transform duration-1000"
+                className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] object-cover group-hover:scale-[1.01] transition-transform duration-1000"
               />
 
               {/* Scan line effect */}
