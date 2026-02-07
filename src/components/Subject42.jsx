@@ -85,7 +85,7 @@ export default function Subject42() {
           transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 lg:mb-24"
         >
-          <h2 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[8rem] leading-[0.85] tracking-tighter text-white">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.85] tracking-tighter text-white">
             SUBJECT
             <br />
             <span className="relative">

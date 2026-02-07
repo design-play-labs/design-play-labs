@@ -5,10 +5,28 @@ export default function Contact() {
   const sectionRef = useRef(null)
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSending(true)
+    setError(false)
+    try {
+      const res = await fetch('https://formspree.io/f/mbdajgpp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(e.target))),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    }
+    setSending(false)
   }
 
   return (
@@ -106,6 +124,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       required
                       placeholder="Dr. Funsworth"
                       className="w-full font-body text-base border-2 border-lab-fog px-4 py-3.5
@@ -120,6 +139,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       required
                       placeholder="doc@funscience.org"
                       className="w-full font-mono text-base border-2 border-lab-fog px-4 py-3.5
@@ -132,7 +152,7 @@ export default function Contact() {
                     <label className="font-mono text-sm font-medium text-lab-steel tracking-[0.1em] uppercase block mb-2">
                       Subject
                     </label>
-                    <select className="w-full font-mono text-base border-2 border-lab-fog px-4 py-3.5
+                    <select name="subject" className="w-full font-mono text-base border-2 border-lab-fog px-4 py-3.5
                       focus:border-lab-ink focus:outline-none transition-colors duration-200
                       bg-transparent text-lab-graphite appearance-none cursor-pointer"
                       style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%23B8B5AE'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 14px center' }}
@@ -150,6 +170,7 @@ export default function Contact() {
                       Message *
                     </label>
                     <textarea
+                      name="message"
                       required
                       rows={5}
                       placeholder="Tell us what's on your mind. No judgement. Unless you prefer Monopoly."
@@ -161,12 +182,19 @@ export default function Contact() {
 
                   <button
                     type="submit"
+                    disabled={sending}
                     className="w-full bg-lab-ink text-lab-white font-heading text-base font-bold uppercase tracking-wide
                       px-6 py-4 hover:bg-accent transition-colors duration-300
-                      active:scale-[0.99] transform"
+                      active:scale-[0.99] transform disabled:opacity-60"
                   >
-                    Transmit Message
+                    {sending ? 'Transmitting...' : 'Transmit Message'}
                   </button>
+
+                  {error && (
+                    <p className="font-mono text-sm text-danger text-center">
+                      Transmission failed. Try again?
+                    </p>
+                  )}
 
                   <p className="font-mono text-sm font-medium text-lab-steel text-center tracking-wide">
                     NO SPAM. WE PROMISE. OKAY MAYBE ONE MEEPLE GIF.

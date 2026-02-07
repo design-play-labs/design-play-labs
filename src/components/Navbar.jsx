@@ -34,7 +34,7 @@ export default function Navbar() {
           <img
             src="/images/Design_Play_Labs_logo_transparent.png"
             alt="Design Play Labs"
-            className="h-14 sm:h-20 md:h-28 lg:h-32 w-auto"
+            className="h-20 sm:h-28 md:h-40 lg:h-48 w-auto"
           />
         </a>
 

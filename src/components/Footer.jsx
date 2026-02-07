@@ -9,9 +9,9 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-5">
               <img
-                src="/images/Design_Play_Labs_logo_transparent.png"
+                src="/images/Design_Play_Labs_logo.png"
                 alt="Design Play Labs"
-                className="h-16 w-auto brightness-0 invert opacity-80"
+                className="h-16 w-auto"
               />
             </div>
             <p className="font-mono text-sm text-white/40 leading-relaxed max-w-xs">

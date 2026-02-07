@@ -1,12 +1,23 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 
 const HERO_IMG = '/images/Photorealistic/2026-01-29-dpl-photo-box-exploding-contents.png'
+
+const TAGLINES = [
+  'Kickstarter coming soon — get in before the containment breach.',
+  'Kickstarter coming soon — side effects may include fun.',
+  'Kickstarter coming soon — this is not a drill. Okay, it might be a drill.',
+  "Kickstarter coming soon — tell your friends. Don't tell Tina.",
+  'Kickstarter coming soon — Subject 42 cannot be contained much longer.',
+  'Kickstarter coming soon — get in before Tina does.',
+  'Kickstarter coming soon — results may vary. Fun will not.',
+]
 
 export default function Hero() {
   const [email, setEmail] = useState('')
   const [honey, setHoney] = useState('')
   const [status, setStatus] = useState('idle') // idle | sending | success | error
+  const tagline = useMemo(() => TAGLINES[Math.floor(Math.random() * TAGLINES.length)], [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -144,7 +155,7 @@ export default function Hero() {
                 </form>
               )}
               <p className="font-mono text-sm font-medium text-lab-steel mt-4 tracking-wide">
-                Kickstarter coming soon — get in before Tina does.
+                {tagline}
               </p>
             </motion.div>
           </div>
