@@ -230,7 +230,7 @@ export default function Subject42() {
                       Laser Calibration Protocol
                     </span>
                     <span className="font-mono text-sm text-white/40 mt-1 block">
-                      "Every pip. Perfectly placed."
+                      "Every pip. Perfectly placed. Even extra ones."
                     </span>
                   </div>
                 </div>
