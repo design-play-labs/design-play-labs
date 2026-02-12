@@ -1,9 +1,9 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-const IMG_MICROSCOPE = '/images/Photorealistic/2026-01-29-dpl-photo-microscope-meeple.png'
-const IMG_PETRI = '/images/Photorealistic/2026-01-29-dpl-photo-petri-dish-meeples-growing.png'
-const IMG_TEST_TUBES = '/images/Photorealistic/2026-01-29-dpl-photo-tall-test-tubes-rainbow.png'
+const IMG_MICROSCOPE = '/images/Photorealistic/2026-01-29-dpl-photo-microscope-meeple.webp'
+const IMG_PETRI = '/images/Photorealistic/2026-01-29-dpl-photo-petri-dish-meeples-growing.webp'
+const IMG_TEST_TUBES = '/images/Photorealistic/2026-01-29-dpl-photo-tall-test-tubes-rainbow.webp'
 
 const stats = [
   { value: '2,847', label: 'Prototypes Destroyed', note: '(so far)' },
@@ -77,6 +77,7 @@ export default function About() {
               <img
                 src={IMG_MICROSCOPE}
                 alt="A meeple being examined under a brass microscope, magnified to reveal its blue and red painted details"
+                loading="lazy"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-[1.02] transition-transform duration-700"
               />
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/30 to-transparent h-24" />
@@ -99,6 +100,7 @@ export default function About() {
               <img
                 src={IMG_PETRI}
                 alt="Colorful meeples growing in clusters inside a petri dish, viewed from above in a laboratory setting"
+                loading="lazy"
                 className="w-full aspect-[4/3] object-cover group-hover:scale-[1.02] transition-transform duration-700"
               />
               <div className="absolute top-3 right-3 bg-lab-white/90 backdrop-blur-sm px-3 py-1.5">

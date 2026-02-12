@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 
-const HERO_IMG = '/images/Photorealistic/2026-01-29-dpl-photo-box-exploding-contents.png'
+const HERO_IMG = '/images/Photorealistic/2026-01-29-dpl-photo-box-exploding-contents.webp'
 
 const TAGLINES = [
   'Kickstarter coming soon — get in before the containment breach.',

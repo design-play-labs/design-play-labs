@@ -1,9 +1,9 @@
 import { useRef } from 'react'
 import { motion, useInView, useMotionValue, useSpring, useTransform } from 'framer-motion'
 
-const IMG_HERO = '/images/Photorealistic/2026-01-29-dpl-photo-particle-accelerator-games.png'
-const IMG_XRAY = '/images/Photorealistic/2026-01-29-dpl-photo-xray-meeple.png'
-const IMG_LASER = '/images/Photorealistic/2026-01-29-dpl-photo-laser-burning-dice-pips.png'
+const IMG_HERO = '/images/Photorealistic/2026-01-29-dpl-photo-particle-accelerator-games.webp'
+const IMG_XRAY = '/images/Photorealistic/2026-01-29-dpl-photo-xray-meeple.webp'
+const IMG_LASER = '/images/Photorealistic/2026-01-29-dpl-photo-laser-burning-dice-pips.webp'
 
 function TiltCard({ children, className = '' }) {
   const ref = useRef(null)
@@ -117,6 +117,7 @@ export default function Subject42() {
               <img
                 src={IMG_HERO}
                 alt="Scientists in lab coats observe colorful meeples and game components racing through a particle accelerator tube with streaks of neon light"
+                loading="lazy"
                 className="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] object-cover group-hover:scale-[1.01] transition-transform duration-1000"
               />
 
@@ -193,6 +194,7 @@ export default function Subject42() {
                   <img
                     src={IMG_XRAY}
                     alt="X-ray scan of a meeple showing colorful layered internal structure on a medical monitor"
+                    loading="lazy"
                     className="w-full aspect-[4/3] object-cover group-hover:scale-[1.03] transition-transform duration-700"
                   />
                   <div className="p-5 border-t border-white/10">
@@ -220,6 +222,7 @@ export default function Subject42() {
                   <img
                     src={IMG_LASER}
                     alt="A robotic arm fires a precise violet laser beam at a rainbow-colored die, burning detailed pip marks into its surface"
+                    loading="lazy"
                     className="w-full aspect-[4/3] object-cover group-hover:scale-[1.03] transition-transform duration-700"
                   />
                   <div className="p-5 border-t border-white/10">
