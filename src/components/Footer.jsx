@@ -38,20 +38,26 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social placeholder */}
+          {/* Social */}
           <div>
             <span className="font-mono text-sm font-medium text-white/30 tracking-[0.1em] uppercase block mb-4">
               Field Notes
             </span>
             <div className="flex flex-col gap-3">
-              {['Instagram', 'BoardGameGeek', 'Discord'].map((link) => (
-                <span
-                  key={link}
-                  className="font-mono text-sm text-white/50 hover:text-white transition-colors duration-200 cursor-pointer"
-                >
-                  {link}
-                </span>
-              ))}
+              <a
+                href="https://www.instagram.com/designplaylabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-sm text-white/50 hover:text-white transition-colors duration-200"
+              >
+                Instagram
+              </a>
+              <span className="font-mono text-sm text-white/50 hover:text-white transition-colors duration-200 cursor-pointer">
+                BoardGameGeek
+              </span>
+              <span className="font-mono text-sm text-white/50 hover:text-white transition-colors duration-200 cursor-pointer">
+                Discord
+              </span>
             </div>
           </div>
 
