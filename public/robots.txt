@@ -1,0 +1,5 @@
+# Design Play Labs — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.designplaylabs.com/sitemap.xml
